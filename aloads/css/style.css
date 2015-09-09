@@ -1,0 +1,453 @@
+@charset "UTF-8";
+
+/*
+  author: Awedoo Studio
+  item: Aloads - CSS Animated Preloaders
+  version: v1.0
+  url: http://codecanyon.net/user/awedoo
+*/
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+@font-face {
+    font-family: 'awdfont';
+    src: url('../font/awdfont.eot?52192752');
+    src: url('../font/awdfont.eot?52192752#iefix') format('embedded-opentype'),
+    url('../font/awdfont.woff?52192752') format('woff'),
+    url('../font/awdfont.ttf?52192752') format('truetype'),
+    url('../font/awdfont.svg?52192752#awdfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "awdfont";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+    content: '\e800';
+}
+
+/* '' */
+.icon-github-circled:before {
+    content: '\e801';
+}
+
+/* '' */
+.icon-mail-alt:before {
+    content: '\e802';
+}
+
+/* '' */
+.icon-angle-right:before {
+    content: '\e803';
+}
+
+/* '' */
+.icon-angle-left:before {
+    content: '\e804';
+}
+
+/* '' */
+.icon-gplus:before {
+    content: '\e805';
+}
+
+/* '' */
+.icon-vkontakte:before {
+    content: '\e806';
+}
+
+/* '' */
+.icon-facebook:before {
+    content: '\e807';
+}
+
+/* '' */
+.icon-cancel:before {
+    content: '\e808';
+}
+
+/* '' */
+.icon-info:before {
+    content: '\e809';
+}
+
+/* '' */
+.icon-help:before {
+    content: '\e80a';
+}
+
+/* '' */
+.icon-eye:before {
+    content: '\e80b';
+}
+
+/* '' */
+.icon-bookmark:before {
+    content: '\e80c';
+}
+
+/* '' */
+.icon-angle-up:before {
+    content: '\e80d';
+}
+
+/* '' */
+.icon-pinterest:before {
+    content: '\e80e';
+}
+
+/* '' */
+.icon-linkedin:before {
+    content: '\e80f';
+}
+
+/* '' */
+.icon-zoom-in:before {
+    content: '\e810';
+}
+
+/* '' */
+.icon-zoom-out:before {
+    content: '\e811';
+}
+
+/* '' */
+.icon-dribbble:before {
+    content: '\e812';
+}
+
+/* '' */
+
+body {
+    margin: 0;
+    background-color: #dddddd;
+    font-family: "Lato", sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 80px;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+header .logo {
+    display: inline-block;
+    color: #58626e;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 24px 0;
+}
+
+header .logo .ver {
+    font-size: 10px;
+    color: #aaa;
+    letter-spacing: 0;
+    vertical-align: top;
+}
+
+header .repository {
+    display: inline-block;
+    float: right;
+    line-height: 80px;
+    font-size: 28px;
+}
+
+header .repository a {
+    color: #58626e;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
+    transition: .35s;
+}
+
+header .repository a:hover {
+    opacity: 0.8;
+}
+
+#content {
+    margin-top: 140px;
+}
+
+.container {
+    width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.preloaders {
+    margin: 0 -15px;
+}
+
+.preloader {
+    position: relative;
+    width: 33.3333333%;
+    float: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: inherit;
+    margin-bottom: 30px;
+}
+
+.preloader:hover .icon {
+    color: #666;
+}
+
+.preloader .item {
+    position: relative;
+    background: #fff;
+    height: 180px;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
+    transition: .35s;
+}
+
+.preloader .item pre {
+    display: none;
+}
+
+.preloader.dark .item {
+    background: #333333;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
+    transition: .35s;
+}
+
+.preloader .icon {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: #dddddd;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
+    transition: .35s;
+}
+
+.preloader .footer {
+    padding: 15px;
+    background: #f3f3f3;
+    border-top: 1px solid #dddddd;
+    text-align: left;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
+    transition: .35s;
+}
+
+.preloader.dark .footer {
+    background: #333333;
+    border-top: 1px solid #666666;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -ms-transition: .35s;
+    -o-transition: .35s;
+    transition: .35s;
+}
+
+.preloader .title {
+    /*float: left;*/
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: #58626e;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.preloader.dark .title {
+    color: #ffffff;
+}
+
+.preloader .options {
+    display: none;
+    float: right;
+    height: 18px;
+}
+
+.preloader .options .btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #666666;
+    border: 2px solid #f3f3f3;
+    display: inline-block;
+}
+
+.preloader .options .btn.active {
+    border: 2px solid #dddddd;
+}
+
+.preloader .options .dark-btn {
+    background: #333333;
+}
+
+.preloader .options .light-btn {
+    background: #ffffff;
+}
+
+.preloader .options .color-btn {
+    background: url('../img/radial.png') 50% 50% no-repeat;
+}
+
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after,
+.container:after {
+    clear: both;
+}
+
+#footer {
+    text-align: center;
+}
+
+#footer p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #666666;
+}
+
+#footer p > a {
+    color: #666666;
+}
+
+.code {
+    margin: 0 -10px;
+}
+
+.html-code, .css-code {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.html-code pre,
+.css-code pre {
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+    background: #dddddd;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    overflow-y: auto;
+}
+
+.modalDialog > div {
+    width: 800px;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background: #fff;
+}
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close {
+    color: #666;
+    line-height: 25px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 24px;
+    text-decoration: none;
+}
+
+.close:hover {
+    color: #333333;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        width: 940px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .container {
+        width: 100%;
+    }
+    .modalDialog > div {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .preloader {
+        width: 50%;
+    }
+
+    .html-code, .css-code {
+        width: 100%;
+    }
+
+    .html-code pre, .css-code pre {
+        height: auto;
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 479px) {
+    .preloader {
+        width: 100%;
+    }
+
+    .modalDialog > div {
+        width: 80%;
+    }
+}

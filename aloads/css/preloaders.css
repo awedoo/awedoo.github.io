@@ -1,0 +1,729 @@
+@charset "UTF-8";
+
+/*
+  author: Awedoo Studio
+*/
+
+/*==================================================
+01. Clock
+02. Balloons
+03. Hourglass
+04. Carousel
+05. Bounce
+06. Ripple
+
+==================================================*/
+
+/*==================================================
+01. Clock
+==================================================*/
+
+.awd_clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    margin: -20px 0 0 -20px;
+    border: 2px solid #666;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+.awd_clock > div:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-top: 15px solid #ccc;
+    margin: -16px 0 0 -1px;
+    background: #666;
+    -webkit-animation: awd_clock 1s linear 0s infinite;
+    animation: awd_clock 1s linear 0s infinite;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+
+.awd_clock > div:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-top: 11px solid #888;
+    margin: -12px 0 0 -1px;
+    background: #666;
+    -webkit-animation: awd_clock 6s linear 0s infinite;
+    animation: awd_clock 6s linear 0s infinite;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+
+@-webkit-keyframes awd_clock {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes awd_clock {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Color */
+
+/*==================================================
+02. Balloons
+==================================================*/
+
+.awd_balloons {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    animation: awd_balloons 5s infinite linear;
+}
+
+.awd_balloons > div {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: #666;
+    display: block;
+    animation: awd_balloons 1s infinite linear;
+}
+
+.awd_balloons > div:nth-child(1) {
+    opacity: 0.5;
+}
+
+.awd_balloons > div:nth-child(2) {
+    left: 22px;
+    animation-delay: .2s;
+    opacity: 0.4;
+}
+
+.awd_balloons > div:nth-child(3) {
+    top: 22px;
+    animation-delay: .4s;
+    opacity: 0.5;
+}
+
+.awd_balloons > div:nth-child(4) {
+    top: 22px;
+    left: 22px;
+    animation-delay: .6s;
+    opacity: 0.6;
+}
+
+@keyframes awd_balloons {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*==================================================
+03. Hourglass
+==================================================*/
+
+.awd_hourglass {
+    animation: awd_hourglass 5s cubic-bezier(.8, 0, .2, 1) infinite;
+    height: 40px;
+    width: 41px;
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    opacity: 0.8;
+}
+
+@keyframes awd_hourglass {
+    90% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.awd_hourglass > div:nth-child(1) {
+    animation: awd_hourglass_top 5s linear infinite;
+    border-top: 20px solid #666;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    height: 0px;
+    width: 1px;
+    transform-origin: 50% 100%;
+}
+
+@keyframes awd_hourglass_top {
+    90% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.awd_hourglass > div:nth-child(2) {
+    animation: awd_hourglass_bottom 5s linear infinite;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #666;
+    border-left: 20px solid transparent;
+    height: 0px;
+    width: 1px;
+    transform: scale(0);
+    transform-origin: 50% 100%;
+}
+
+@keyframes awd_hourglass_bottom {
+    10% {
+        transform: scale(0);
+    }
+    90% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.awd_hourglass > div:nth-child(3) {
+    animation: line 5s linear infinite;
+    border-left: 1px dotted #666;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+@keyframes line {
+    10% {
+        height: 20px;
+    }
+    100% {
+        height: 20px;
+    }
+}
+
+/*==================================================
+04. Carousel
+==================================================*/
+
+.awd_carousel {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+}
+
+.awd_carousel > div {
+    position: relative;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: #666;
+    background: #666;
+    border-color: #666;
+    border-style: solid;
+    border-width: 0
+}
+
+.awd_carousel:after {
+    display: table;
+    line-height: 0;
+    clear: both;
+    content: ""
+}
+
+.awd_carousel {
+    width: 16px;
+    height: 16px
+}
+
+.awd_carousel > div {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    display: block;
+    width: 16px;
+    width: 100%;
+    height: 16px;
+    height: 100%;
+    float: left;
+    border-radius: 100%;
+    opacity: .5;
+    -webkit-animation: awd_carousel_position 2.5s infinite cubic-bezier(0.25, 0, 0.75, 1), awd_carousel_size 2.5s infinite cubic-bezier(0.25, 0, 0.75, 1);
+    -moz-animation: awd_carousel_position 2.5s infinite cubic-bezier(0.25, 0, 0.75, 1), awd_carousel_size 2.5s infinite cubic-bezier(0.25, 0, 0.75, 1);
+    -o-animation: awd_carousel_position 2.5s infinite cubic-bezier(0.25, 0, 0.75, 1), awd_carousel_size 2.5s infinite cubic-bezier(0.25, 0, 0.75, 1);
+    animation: awd_carousel_position 2.5s infinite cubic-bezier(0.25, 0, 0.75, 1), awd_carousel_size 2.5s infinite cubic-bezier(0.25, 0, 0.75, 1)
+}
+
+.awd_carousel > div:nth-child(1) {
+    -webkit-animation-delay: 0s, -.5s;
+    -moz-animation-delay: 0s, -.5s;
+    -o-animation-delay: 0s, -.5s;
+    animation-delay: 0s, -.5s
+}
+
+.awd_carousel > div:nth-child(2) {
+    -webkit-animation-delay: -.5s, -1s;
+    -moz-animation-delay: -.5s, -1s;
+    -o-animation-delay: -.5s, -1s;
+    animation-delay: -.5s, -1s
+}
+
+.awd_carousel > div:nth-child(3) {
+    -webkit-animation-delay: -1s, -1.5s;
+    -moz-animation-delay: -1s, -1.5s;
+    -o-animation-delay: -1s, -1.5s;
+    animation-delay: -1s, -1.5s
+}
+
+.awd_carousel > div:nth-child(4) {
+    -webkit-animation-delay: -1.5s, -2s;
+    -moz-animation-delay: -1.5s, -2s;
+    -o-animation-delay: -1.5s, -2s;
+    animation-delay: -1.5s, -2s
+}
+
+.awd_carousel > div:nth-child(5) {
+    -webkit-animation-delay: -2s, -2.5s;
+    -moz-animation-delay: -2s, -2.5s;
+    -o-animation-delay: -2s, -2.5s;
+    animation-delay: -2s, -2.5s
+}
+
+@-webkit-keyframes awd_carousel_position {
+    50% {
+        left: 100%
+    }
+}
+
+@-moz-keyframes awd_carousel_position {
+    50% {
+        left: 100%
+    }
+}
+
+@-o-keyframes awd_carousel_position {
+    50% {
+        left: 100%
+    }
+}
+
+@keyframes awd_carousel_position {
+    50% {
+        left: 100%
+    }
+}
+
+@-webkit-keyframes awd_carousel_size {
+    50% {
+        -webkit-transform: scale(0.3, 0.3);
+        transform: scale(0.3, 0.3)
+    }
+}
+
+@-moz-keyframes awd_carousel_size {
+    50% {
+        -moz-transform: scale(0.3, 0.3);
+        transform: scale(0.3, 0.3)
+    }
+}
+
+@-o-keyframes awd_carousel_size {
+    50% {
+        -o-transform: scale(0.3, 0.3);
+        transform: scale(0.3, 0.3)
+    }
+}
+
+@keyframes awd_carousel_size {
+    50% {
+        -webkit-transform: scale(0.3, 0.3);
+        -moz-transform: scale(0.3, 0.3);
+        -o-transform: scale(0.3, 0.3);
+        transform: scale(0.3, 0.3)
+    }
+}
+
+/*==================================================
+05. Bounce
+==================================================*/
+
+.awd_bounce {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.awd_bounce > div {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.awd_bounce > div > div {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+    background-color: #666666;
+    border-radius: 100%;
+    -webkit-animation: awd_bounce 1s infinite ease-in-out;
+    animation: awd_bounce 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes awd_bounce {
+    0% {
+        -webkit-transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes awd_bounce {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/*==================================================
+06. Ripple
+==================================================*/
+
+.awd_ripple {
+    /* backface hidden */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.awd_ripple > div:nth-child(0) {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+.awd_ripple > div:nth-child(1) {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.awd_ripple > div:nth-child(2) {
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+}
+
+.awd_ripple > div:nth-child(3) {
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+}
+
+.awd_ripple > div {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid #666666;
+    -webkit-animation: awd_ripple 1.25s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+    animation: awd_ripple 1.25s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+}
+
+@-webkit-keyframes awd_ripple {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(0.1);
+        transform: translate(-50%, -50%) scale(0.1);
+        opacity: 1;
+    }
+    70% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.0;
+    }
+}
+
+@keyframes awd_ripple {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(0.1);
+        transform: translate(-50%, -50%) scale(0.1);
+        opacity: 1;
+    }
+    70% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.0;
+    }
+}
+
+/*==================================================
+07. Spinning Disc
+==================================================*/
+
+.awd_disc {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: #666666;
+    border-radius: 50px;
+    animation: awd_disc_rotate 1.5s infinite linear;
+}
+
+.awd_disc > div {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+    left: 50%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border-top: 5px solid #666666;
+    border-bottom: 5px solid #666666;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-radius: 50%;
+    animation: awd_disc 1.5s infinite linear;
+}
+
+@keyframes awd_disc_rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        opacity: 0.6;
+    }
+}
+
+@keyframes awd_disc_ {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/*==================================================
+08. Snake
+==================================================*/
+
+.awd_snake {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+    width: 62px;
+    left: 50%;
+    top: 50%;
+}
+
+.awd_snake > div {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #666666;
+    opacity: 0.5;
+    border-radius: 20px;
+    -webkit-animation: awd_snake 1s infinite ease-in-out;
+    -moz-animation: awd_snake 1s infinite ease-in-out;
+    -ms-animation: awd_snake 1s infinite ease-in-out;
+    -animation: awd_snake 1s infinite ease-in-out;
+
+}
+
+.awd_snake > div:nth-child(2) {
+    left: 13px;
+    animation-delay: .2s;
+}
+
+.awd_snake > div:nth-child(3) {
+    left: 26px;
+    animation-delay: .4s;
+}
+
+.awd_snake > div:nth-child(4) {
+    left: 39px;
+    animation-delay: .6s;
+}
+
+.awd_snake > div:nth-child(5) {
+    left: 52px;
+    animation-delay: .8s;
+}
+
+@keyframes awd_snake {
+    0% {
+        opacity: 0.3;
+        transform: translateY(0px);
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: translateY(-10px);
+        background: #333333;
+        box-shadow: 0px 20px 3px rgba(0, 0, 0, 0.05);
+    }
+    100% {
+        opacity: 0.3;
+        transform: translateY(0px);
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/*==================================================
+09. Audio Wave
+==================================================*/
+
+.awd_wave {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+    width: 62px;
+    left: 50%;
+    top: 50%;
+}
+
+.awd_wave > div {
+    display: block;
+    bottom: 0px;
+    width: 9px;
+    height: 5px;
+    background: #666666;
+    position: absolute;
+    animation: awd_wave 1.5s infinite ease-in-out;
+}
+
+.awd_wave > div:nth-child(2) {
+    left: 11px;
+    animation-delay: .2s;
+
+}
+
+.awd_wave > div:nth-child(3) {
+    left: 22px;
+    animation-delay: .4s;
+}
+
+.awd_wave > div:nth-child(4) {
+    left: 33px;
+    animation-delay: .6s;
+}
+
+.awd_wave > div:nth-child(5) {
+    left: 44px;
+    animation-delay: .8s;
+}
+
+@keyframes awd_wave {
+    0% {
+        height: 5px;
+        transform: translateY(0px);
+        opacity: 0.8;
+    }
+    25% {
+        height: 20px;
+        transform: translateY(10px);
+        opacity: 0.9;
+    }
+    50% {
+        height: 5px;
+        transform: translateY(0px);
+        opacity: 0.8;
+    }
+    100% {
+        height: 5px;
+        transform: translateY(0px);
+        opacity: 0.8;
+    }
+}
