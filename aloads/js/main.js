@@ -14,6 +14,10 @@ $(document).ready(function(){
         $('body').css('overflow','hidden');
 	});
 
+    $(".icon-eye").on("click",function(){
+        $(this).parent().find(".item").click();
+    });
+
     $("#modal pre").on("dblclick",function(){
         if (this.select) {
             this.select();

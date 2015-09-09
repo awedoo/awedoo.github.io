@@ -230,6 +230,10 @@ header .repository a:hover {
     display: none;
 }
 
+.preloader .item:hover {
+    cursor: pointer;
+}
+
 .preloader.dark .item {
     background: #333333;
     -webkit-transition: .35s;
