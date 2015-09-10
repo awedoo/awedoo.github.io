@@ -19,7 +19,7 @@
 
 <header id="header">
     <div class="container">
-        <div class="logo">Aloads <span class="ver">1.0.0</span></div>
+        <div class="logo">Aloads <span class="ver">1.0.1</span></div>
         <div class="repository">
             <a href="https://github.com/awedoo/aloads" target="_blank"><span class="icon-github-circled"></span></a>
         </div>
@@ -1497,12 +1497,525 @@
     <span class="icon icon-eye"></span>
 </div>
 
+<div class="preloader">
+
+    <div class="item">
+
+<!-- Pacman -->
+<div class="awd_pacman">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<!-- /Pacman -->
+
+<!-- Pacman CSS-->
+<pre>
+.awd_pacman,
+.awd_pacman > div {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.awd_pacman {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: block;
+    font-size: 0;
+    color: #666666;
+}
+
+.awd_pacman > div {
+    display: inline-block;
+    float: none;
+    background-color: currentColor;
+    border: 0 solid currentColor
+}
+
+.awd_pacman {
+    width: 32px;
+    height: 32px
+}
+
+.awd_pacman > div:nth-child(1),
+.awd_pacman > div:nth-child(2) {
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-style: solid;
+    border-width: 16px;
+    border-right-color: transparent;
+    border-radius: 100%;
+    -webkit-animation: awd_pacman_up 0.5s 0s infinite;
+    -moz-animation: awd_pacman_up 0.5s 0s infinite;
+    -o-animation: awd_pacman_up 0.5s 0s infinite;
+    animation: awd_pacman_up 0.5s 0s infinite
+}
+
+.awd_pacman > div:nth-child(2) {
+    margin-top: -32px;
+    -webkit-animation-name: awd_pacman_down;
+    -moz-animation-name: awd_pacman_down;
+    -o-animation-name: awd_pacman_down;
+    animation-name: awd_pacman_down
+}
+
+.awd_pacman > div:nth-child(3),
+.awd_pacman > div:nth-child(4),
+.awd_pacman > div:nth-child(5),
+.awd_pacman > div:nth-child(6) {
+    position: absolute;
+    top: 50%;
+    left: 200%;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    opacity: 0;
+    -webkit-animation: awd_pacman_balls 2s 0s infinite linear;
+    -moz-animation: awd_pacman_balls 2s 0s infinite linear;
+    -o-animation: awd_pacman_balls 2s 0s infinite linear;
+    animation: awd_pacman_balls 2s 0s infinite linear
+}
+
+.awd_pacman > div:nth-child(3) {
+    -webkit-animation-delay: -1.44s;
+    -moz-animation-delay: -1.44s;
+    -o-animation-delay: -1.44s;
+    animation-delay: -1.44s
+}
+
+.awd_pacman > div:nth-child(4) {
+    -webkit-animation-delay: -1.94s;
+    -moz-animation-delay: -1.94s;
+    -o-animation-delay: -1.94s;
+    animation-delay: -1.94s
+}
+
+.awd_pacman > div:nth-child(5) {
+    -webkit-animation-delay: -2.44s;
+    -moz-animation-delay: -2.44s;
+    -o-animation-delay: -2.44s;
+    animation-delay: -2.44s
+}
+
+.awd_pacman > div:nth-child(6) {
+    -webkit-animation-delay: -2.94s;
+    -moz-animation-delay: -2.94s;
+    -o-animation-delay: -2.94s;
+    animation-delay: -2.94s
+}
+
+@-webkit-keyframes awd_pacman_up {
+    0%, 100% {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg)
+    }
+    50% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes awd_pacman_up {
+    0%, 100% {
+        -moz-transform: rotate(270deg);
+        transform: rotate(270deg)
+    }
+    50% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-o-keyframes awd_pacman_up {
+    0%, 100% {
+        -o-transform: rotate(270deg);
+        transform: rotate(270deg)
+    }
+    50% {
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes awd_pacman_up {
+    0%, 100% {
+        transform: rotate(270deg)
+    }
+    50% {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes awd_pacman_down {
+    0%, 100% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg)
+    }
+    50% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@-moz-keyframes awd_pacman_down {
+    0%, 100% {
+        -moz-transform: rotate(90deg);
+        transform: rotate(90deg)
+    }
+    50% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@-o-keyframes awd_pacman_down {
+    0%, 100% {
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg)
+    }
+    50% {
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes awd_pacman_down {
+    0%, 100% {
+        transform: rotate(90deg)
+    }
+    50% {
+        transform: rotate(0deg)
+    }
+}
+
+@-webkit-keyframes awd_pacman_balls {
+    0% {
+        left: 200%;
+        opacity: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+    5% {
+        opacity: .5
+    }
+    66% {
+        opacity: 1
+    }
+    67% {
+        opacity: 0
+    }
+    100% {
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+}
+
+@-moz-keyframes awd_pacman_balls {
+    0% {
+        left: 200%;
+        opacity: 0;
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+    5% {
+        opacity: .5
+    }
+    66% {
+        opacity: 1
+    }
+    67% {
+        opacity: 0
+    }
+    100% {
+        left: 0;
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+}
+
+@-o-keyframes awd_pacman_balls {
+    0% {
+        left: 200%;
+        opacity: 0;
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+    5% {
+        opacity: .5
+    }
+    66% {
+        opacity: 1
+    }
+    67% {
+        opacity: 0
+    }
+    100% {
+        left: 0;
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+}
+
+@keyframes awd_pacman_balls {
+    0% {
+        left: 200%;
+        opacity: 0;
+        transform: translateY(-50%)
+    }
+    5% {
+        opacity: .5
+    }
+    66% {
+        opacity: 1
+    }
+    67% {
+        opacity: 0
+    }
+    100% {
+        left: 0;
+        transform: translateY(-50%)
+    }
+}
+</pre>
+        <!-- /Pacman-->
+
+    </div>
+    <div class="footer clearfix">
+        <div class="title">Pacman</div>
+        <div class="options">
+            <a href="#" class="btn dark-btn active"></a>
+            <a href="#" class="btn color-btn"></a>
+            <a href="#" class="btn light-btn"></a>
+        </div>
+    </div>
+    <span class="icon icon-eye"></span>
+</div>
+
+<div class="preloader">
+
+<div class="item">
+
+<!-- Newton Ball -->
+<div class="awd_newton">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<!-- /Newton Ball -->
+
+<!-- Newton Ball-->
+<pre>
+.awd_newton,
+.awd_newton > div {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.awd_newton {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: block;
+    font-size: 0;
+    color: #666666;
+}
+
+.awd_newton > div {
+    display: inline-block;
+    float: none;
+    background-color: currentColor;
+    border: 0 solid currentColor
+}
+
+.awd_newton {
+    width: 40px;
+    height: 10px
+}
+
+.awd_newton > div {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%
+}
+
+.awd_newton > div:first-child {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-animation: awd_newton_left 1s 0s ease-out infinite;
+    -moz-animation: awd_newton_left 1s 0s ease-out infinite;
+    -o-animation: awd_newton_left 1s 0s ease-out infinite;
+    animation: awd_newton_left 1s 0s ease-out infinite
+}
+
+.awd_newton > div:last-child {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-animation: awd_newton_right 1s 0s ease-out infinite;
+    -moz-animation: awd_newton_right 1s 0s ease-out infinite;
+    -o-animation: awd_newton_right 1s 0s ease-out infinite;
+    animation: awd_newton_right 1s 0s ease-out infinite
+}
+
+@-webkit-keyframes awd_newton_left {
+    25% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+    50% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@-moz-keyframes awd_newton_left {
+    25% {
+        -moz-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -moz-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+    50% {
+        -moz-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@-o-keyframes awd_newton_left {
+    25% {
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -o-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+    50% {
+        -o-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@keyframes awd_newton_left {
+    25% {
+        transform: translateX(-100%);
+        animation-timing-function: ease-in
+    }
+    50% {
+        transform: translateX(0%)
+    }
+}
+
+@-webkit-keyframes awd_newton_right {
+    50% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+    75% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@-moz-keyframes awd_newton_right {
+    50% {
+        -moz-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+    75% {
+        -moz-transform: translateX(100%);
+        transform: translateX(100%);
+        -moz-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+    100% {
+        -moz-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@-o-keyframes awd_newton_right {
+    50% {
+        -o-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+    75% {
+        -o-transform: translateX(100%);
+        transform: translateX(100%);
+        -o-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+    100% {
+        -o-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@keyframes awd_newton_right {
+    50% {
+        transform: translateX(0%)
+    }
+    75% {
+        transform: translateX(100%);
+        animation-timing-function: ease-in
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+</pre>
+<!-- /Newton Ball-->
+
+</div>
+<div class="footer clearfix">
+    <div class="title">Newton Ball</div>
+    <div class="options">
+        <a href="#" class="btn dark-btn active"></a>
+        <a href="#" class="btn color-btn"></a>
+        <a href="#" class="btn light-btn"></a>
+    </div>
+</div>
+<span class="icon icon-eye"></span>
+</div>
+
 </div>
 </div>
 </section>
 <footer id="footer">
     <div class="container">
-        <p>Aloads 1.0.0 <span class="hide-xs">·</span> Created by <a href="https://twitter.com/AwedooStudio">Awedoo
+        <p>Aloads 1.0.1 <span class="hide-xs">·</span> Created by <a href="https://twitter.com/AwedooStudio">Awedoo
             Studio</a></p>
 
         <p>Code licensed under <a href="http://opensource.org/licenses/mit-license.html">MIT License</a></div>
