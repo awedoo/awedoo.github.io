@@ -19,7 +19,7 @@
 
 <header id="header">
     <div class="container">
-        <div class="logo">Aloads <span class="ver">1.0.1</span></div>
+        <div class="logo">Aloads <span class="ver">1.0.2</span></div>
         <div class="repository">
             <a href="https://github.com/awedoo/aloads" target="_blank"><span class="icon-github-circled"></span></a>
         </div>
@@ -2010,12 +2010,177 @@
 <span class="icon icon-eye"></span>
 </div>
 
+<div class="preloader">
+
+<div class="item">
+
+    <!-- Dvizheniya Vasya -->
+    <div class="awd_vasya">
+        <div></div>
+        <div></div>
+    </div>
+    <!-- /Dvizheniya Vasya -->
+
+    <!-- Dvizheniya Vasya-->
+<pre>
+.awd_vasya {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: block;
+    font-size: 0;
+}
+
+.awd_vasya {
+    width: 50px;
+    height: 50px;
+}
+
+.awd_vasya > div {
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-color: #666666;
+}
+
+.awd_vasya > div:first-child {
+    margin-top: -12px;
+    -webkit-animation: awd_vasya_top 1s infinite linear reverse;
+    -moz-animation: awd_vasya_top 1s infinite linear reverse;
+    -o-animation: awd_vasya_top 1s infinite linear reverse;
+    animation: awd_vasya_top 1s infinite linear reverse;
+}
+
+.awd_vasya > div:last-child {
+    margin-top: 12px;
+    -webkit-animation: awd_vasya_bottom 1s infinite linear reverse;
+    -moz-animation: awd_vasya_bottom 1s infinite linear reverse;
+    -o-animation: awd_vasya_bottom 1s infinite linear reverse;
+    animation: awd_vasya_bottom 1s infinite linear reverse;
+}
+
+@-webkit-keyframes awd_vasya_top {
+    0% {
+        margin-top: -12px;
+    }
+    50% {
+        margin-top: 12px;
+    }
+    100% {
+        margin-top: -12px;
+    }
+}
+
+@-moz-keyframes awd_vasya_top {
+    0% {
+        margin-top: -12px;
+    }
+    50% {
+        margin-top: 12px;
+    }
+    100% {
+        margin-top: -12px;
+    }
+}
+
+@-o-keyframes awd_vasya_top {
+    0% {
+        margin-top: -12px;
+    }
+    50% {
+        margin-top: 12px;
+    }
+    100% {
+        margin-top: -12px;
+    }
+}
+
+@keyframes awd_vasya_top {
+    0% {
+        margin-top: -12px;
+    }
+    50% {
+        margin-top: 12px;
+    }
+    100% {
+        margin-top: -12px;
+    }
+}
+
+@-webkit-keyframes awd_vasya_bottom {
+    0% {
+        margin-top: 12px;
+    }
+    50% {
+        margin-top: -12px;
+    }
+    100% {
+        margin-top: 12px;
+    }
+}
+
+@-moz-keyframes awd_vasya_bottom {
+    0% {
+        margin-top: 12px;
+    }
+    50% {
+        margin-top: -12px;
+    }
+    100% {
+        margin-top: 12px;
+    }
+}
+
+@-o-keyframes awd_vasya_bottom {
+    0% {
+        margin-top: 12px;
+    }
+    50% {
+        margin-top: -12px;
+    }
+    100% {
+        margin-top: 12px;
+    }
+}
+
+@keyframes awd_vasya_bottom {
+    0% {
+        margin-top: 12px;
+    }
+    50% {
+        margin-top: -12px;
+    }
+    100% {
+        margin-top: 12px;
+    }
+}
+</pre>
+    <!-- /Newton Ball-->
+
+</div>
+<div class="footer clearfix">
+    <div class="title">Dvizheniya Vasya</div>
+    <div class="options">
+        <a href="#" class="btn dark-btn active"></a>
+        <a href="#" class="btn color-btn"></a>
+        <a href="#" class="btn light-btn"></a>
+    </div>
+</div>
+<span class="icon icon-eye"></span>
+</div>
+
 </div>
 </div>
 </section>
 <footer id="footer">
     <div class="container">
-        <p>Aloads 1.0.1 <span class="hide-xs">·</span> Created by <a href="https://twitter.com/AwedooStudio">Awedoo
+        <p>Aloads 1.0.2 <span class="hide-xs">·</span> Created by <a href="https://twitter.com/AwedooStudio">Awedoo
             Studio</a></p>
 
         <p>Code licensed under <a href="http://opensource.org/licenses/mit-license.html">MIT License</a></div>

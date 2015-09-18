@@ -1555,7 +1555,7 @@
 11. Newton Ball
 ==================================================*/
 
-.awd_newton, 
+.awd_newton,
 .awd_newton > div {
     position: relative;
     -webkit-box-sizing: border-box;
@@ -1730,5 +1730,147 @@
     }
     100% {
         transform: translateX(0%)
+    }
+}
+
+/*==================================================
+11. Dvizheniya Vasya
+==================================================*/
+
+.awd_vasya {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: block;
+    font-size: 0;
+}
+
+.awd_vasya {
+    width: 50px;
+    height: 50px;
+}
+
+.awd_vasya > div {
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-color: #666666;
+}
+
+.awd_vasya > div:first-child {
+    margin-top: -12px;
+    -webkit-animation: awd_vasya_top 1s infinite linear reverse;
+    -moz-animation: awd_vasya_top 1s infinite linear reverse;
+    -o-animation: awd_vasya_top 1s infinite linear reverse;
+    animation: awd_vasya_top 1s infinite linear reverse;
+}
+
+.awd_vasya > div:last-child {
+    margin-top: 12px;
+    -webkit-animation: awd_vasya_bottom 1s infinite linear reverse;
+    -moz-animation: awd_vasya_bottom 1s infinite linear reverse;
+    -o-animation: awd_vasya_bottom 1s infinite linear reverse;
+    animation: awd_vasya_bottom 1s infinite linear reverse;
+}
+
+@-webkit-keyframes awd_vasya_top {
+    0% {
+        margin-top: -12px;
+    }
+    50% {
+        margin-top: 12px;
+    }
+    100% {
+        margin-top: -12px;
+    }
+}
+
+@-moz-keyframes awd_vasya_top {
+    0% {
+        margin-top: -12px;
+    }
+    50% {
+        margin-top: 12px;
+    }
+    100% {
+        margin-top: -12px;
+    }
+}
+
+@-o-keyframes awd_vasya_top {
+    0% {
+        margin-top: -12px;
+    }
+    50% {
+        margin-top: 12px;
+    }
+    100% {
+        margin-top: -12px;
+    }
+}
+
+@keyframes awd_vasya_top {
+    0% {
+        margin-top: -12px;
+    }
+    50% {
+        margin-top: 12px;
+    }
+    100% {
+        margin-top: -12px;
+    }
+}
+
+@-webkit-keyframes awd_vasya_bottom {
+    0% {
+        margin-top: 12px;
+    }
+    50% {
+        margin-top: -12px;
+    }
+    100% {
+        margin-top: 12px;
+    }
+}
+
+@-moz-keyframes awd_vasya_bottom {
+    0% {
+        margin-top: 12px;
+    }
+    50% {
+        margin-top: -12px;
+    }
+    100% {
+        margin-top: 12px;
+    }
+}
+
+@-o-keyframes awd_vasya_bottom {
+    0% {
+        margin-top: 12px;
+    }
+    50% {
+        margin-top: -12px;
+    }
+    100% {
+        margin-top: 12px;
+    }
+}
+
+@keyframes awd_vasya_bottom {
+    0% {
+        margin-top: 12px;
+    }
+    50% {
+        margin-top: -12px;
+    }
+    100% {
+        margin-top: 12px;
     }
 }

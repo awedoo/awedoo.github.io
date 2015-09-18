@@ -1,12 +1,6 @@
 @charset "UTF-8";
 
-/*
-  author: Awedoo Studio
-  item: Aloads - CSS Animated Preloaders
-  version: v1.0
-  url: http://codecanyon.net/user/awedoo
-*/
-@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 
 @font-face {
     font-family: 'awdfont';
