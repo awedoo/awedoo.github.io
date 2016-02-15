@@ -1,0 +1,450 @@
+/*====================================================
+XX. Splash Loader
+====================================================*/
+
+.splash {
+    position: absolute;
+    background: #fff;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1032;
+    animation: splash-bg 7s 1s alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/* Splash Background Animation */
+
+@-webkit-keyframes splash-bg {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #D1EDF5
+    }
+}
+
+@-moz-keyframes splash-bg {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #D1EDF5
+    }
+}
+
+@-o-keyframes splash-bg {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #D1EDF5
+    }
+}
+
+@keyframes splash-bg {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #D1EDF5
+    }
+}
+
+.splash .logo-group {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -120px;
+}
+
+.splash .heart-loader {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 0;
+    margin-left: -80px;
+    width: 160px;
+    height: 102px;
+    overflow: visible;
+}
+
+.splash .heart-loader-group {
+    transform-origin: 0 90px;
+}
+
+.splash .heart-left-loader,
+.splash .heart-right-loader {
+    stroke: #b8b8b8;
+    stroke-dasharray: 308.522, 308.522;
+    stroke-dashoffset: 308.522;
+}
+
+.splash .heart-left-loader {
+    animation: splash-left-heart-anim 5s 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    transform: translateX(0);
+}
+
+.splash .heart-right-loader {
+    animation: splash-right-heart-anim 5s 1s alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    transform: translate(62px, 12px);
+}
+
+.splash .heart-both-loader {
+    stroke: #F05157;
+    fill: transparent;
+    stroke-dasharray: 308.522, 308.522;
+    stroke-dashoffset: 308.522;
+    animation: splash-heart-anim 5s 1s alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes splash-left-heart-anim {
+    12% {
+        stroke-dashoffset: 188.522;
+        stroke: #b8b8b8;
+        fill: transparent;
+    }
+    31% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    41% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    43% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+    85% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+        stroke: #FF7E7E;
+        fill: #FF7E7E;
+        opacity: 1;
+    }
+}
+
+@keyframes splash-left-heart-anim {
+    12% {
+        stroke-dashoffset: 188.522;
+        stroke: #b8b8b8;
+        fill: transparent;
+    }
+    31% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        transform: translateX(0);
+    }
+    41% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        transform: translateX(0);
+    }
+    43% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    85% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: translateY(-2px);
+        stroke: #FF7E7E;
+        fill: #FF7E7E;
+        opacity: 1;
+    }
+}
+
+@keyframes splash-right-heart-anim {
+    12% {
+        stroke-dashoffset: 188.522;
+        fill: transparent;
+        stroke: #b8b8b8;
+    }
+    31% {
+        stroke-dashoffset: 0;
+        transform: translate(62px, 12px);
+        fill: transparent;
+        stroke: #b8b8b8;
+    }
+    41% {
+        stroke-dashoffset: 0;
+        transform: translate(62px, 12px);
+        fill: transparent;
+        stroke: #b8b8b8;
+    }
+    43% {
+        stroke-dashoffset: 0;
+        transform: translate(62px, 12px);
+        opacity: 1;
+        fill: transparent;
+        stroke: #b8b8b8;
+    }
+    85% {
+        stroke-dashoffset: 0;
+        transform: translate(62px, 12px);
+        opacity: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: translate(62px, 10px);
+        stroke: #FF6B6C;
+        fill: #FF6B6C;
+        opacity: 1;
+    }
+}
+
+@keyframes splash-heart-anim {
+    55% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+    70% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    87% {
+        stroke-dashoffset: 0;
+        fill: #F05157;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #F05157;
+    }
+}
+
+.splash-logo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 280px;
+    height: 74px;
+    margin-left: -140px;
+}
+
+.splash-title {
+    fill: transparent;
+    animation: splash-title 7s 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    transform: translate(0, 0);
+}
+
+@keyframes splash-title {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: #39322d;
+        transform: translate(0, -15px);
+    }
+}
+
+.splash-info {
+    fill: transparent;
+    animation: splash-info 6s 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    transform: translate(0, 50px);
+}
+
+@keyframes splash-info {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: #797979;
+        transform: translate(0, 30px);
+    }
+}
+
+/*====================================================
+XX. Preloader
+====================================================*/
+
+.preloader {
+    background: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+}
+
+.preloader > img {
+    height: 125px;
+    width: 125px;
+}
+
+.preloader .heart-loader {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -30px;
+    width: 100px;
+    height: 60px;
+    overflow: visible;
+}
+
+.preloader .heart-loader-group {
+    transform-origin: 0 90px;
+}
+
+.preloader .heart-both-loader {
+    stroke: #b8b8b8;
+    fill: transparent;
+    stroke-dasharray: 308.522, 308.522;
+    stroke-dashoffset: 308.522;
+    animation: pre-heart-anim 3s infinite;
+}
+
+@-webkit-keyframes pre-heart-anim {
+    0% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+}
+
+@keyframes pre-heart-anim {
+    0% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+}
+
+/*====================================================
+XX. Loader
+====================================================*/
+
+.loader {
+    background: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 1031;
+}
+
+.loader .heart-loader {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -30px;
+    width: 100px;
+    height: 60px;
+    overflow: visible;
+}
+
+.loader .heart-loader-group {
+    transform-origin: 0 90px;
+}
+
+.loader .heart-both-loader {
+    stroke: #b8b8b8;
+    fill: transparent;
+    stroke-dasharray: 308.522, 308.522;
+    stroke-dashoffset: 308.522;
+    animation: pre-heart-anim 3s infinite;
+}
+
+@-webkit-keyframes pre-heart-anim {
+    0% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+}
+
+@keyframes pre-heart-anim {
+    0% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+}
